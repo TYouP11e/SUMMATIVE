@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: #00162b;
+}
+
+.nav_bar{
+    width: 100%;
+    height: 60px;
+    background: #77B1D4;
+    font-family: 'Share Tech';
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+}
+
+.rb_home_txt{
+    font-size: 50px;
+    color: #E30118;
+}
+
+.sub_nav{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 40px;
+}
+
+.set_white{
+    color: white;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: visible;
+}
+
+.header-bg{
+    position: absolute;
+    inset: 0;
+    background: url("https://www.formulaonehistory.com/wp-content/uploads/2026/01/2026-RB22-920x580.webp")
+        center / cover no-repeat;
+    filter: blur(10px) brightness(0.8);
+    transform: scale(1.15);
+
+    z-index: 1;
+}
+
+.header-bg::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.header-bg::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0) 40%,
+        rgba(0,0,0,0.4) 70%,
+        rgba(0,0,0,0.85) 100%
+    );
+}
+
+.header::after{
+    content: "";
+    position: absolute;
+    left: -20%;
+    right: -20%;
+    bottom: -250px;
+    height: 400px;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0.4) 35%,
+        rgba(0,0,0,0.15) 60%,
+        rgba(0,0,0,0) 75%
+    );
+
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.header > *:not(.header-bg){
+    position: relative;
+    z-index: 3;
+}
+
+.logo_sect{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}

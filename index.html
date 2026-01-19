@@ -1,40 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="css/style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Island+Moments&family=M+PLUS+1:wght@100..900&family=Share+Tech&display=swap"
-        rel="stylesheet"
-    />
-
-    <title>SUMMATIVE</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=M+PLUS+1:wght@100..900&family=Share+Tech&display=swap" rel="stylesheet"/>
+<title>SUMMATIVE</title>
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header-bg"></div>
-            <nav class="nav_bar">
-                <a href="index.html">
-                    <p class="rb_home_txt">Red Bull</p>
-                </a>
-                <div class="sub_nav">
-                    <a href="#"><p class="set_white">POWERUNITS</p></a>
-                    <a href="#"><p class="set_white">LIVERY</p></a>
-                    <a href="#"><p class="set_white">FIA 2026</p></a>
-                    <a href="#"><p class="set_white">2026 SEASON</p></a>
-                </div>
-            </nav>
-            <div class="logo_sect">
-                <img src="media/rb_logo.png" alt="" class="rb_logo">
+<div class="container">
+
+    <header class="header header_reveal">
+        <div class="header_bg"></div>
+        <nav class="nav_bar">
+            <a href="index.html"><p class="rb_home_txt">Red Bull</p></a>
+            <div class="sub_nav">
+                <a href="#"><p class="set_white">POWERUNITS</p></a>
+                <a href="#"><p class="set_white">LIVERY</p></a>
+                <a href="#"><p class="set_white">FIA 2026</p></a>
+                <a href="#"><p class="set_white">2026 SEASON</p></a>
             </div>
-        </header>
-    </div>
+        </nav>
+        <div class="logo_sect">
+            <img src="media/rb_logo.png" alt="" class="rb_logo" />
+        </div>
+    </header>
+
+    <section class="about_rb section_reveal">
+        <h2 class="about_rb_title">About Redbull</h2>
+        <div class="about_rb_subsect">
+            <p class="about_rb_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quasi modi minima officia consectetur iusto velit vel ad, aliquid eveniet ipsum nesciunt doloremque molestiae vitae adipisci possimus.</p>
+            <img src="media/rb_hist_about.jpg" alt="rb_hist" class="about_rb_hist_img" />
+        </div>
+        <button class="rb_read_more">Read More</button>
+    </section>
+
+    <section class="red_bull_now section_reveal">
+        <h2 class="about_rb_title_now">Redbull Now</h2>
+        <div class="about_rb_subsect_now">
+            <img src="media/rb22.jpg" alt="rb22" class="about_rb_now_img"/>
+            <p class="about_rb_text_now">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et corporis beatae culpa velit pariatur rem possimus itaque illum laborum.</p>
+        </div>
+        <button class="rb_read_more_now">Read More</button>
+    </section>
+
+    <section class="rb_gallery section_reveal">
+        <h2 class="rb_gallery_title">REDBULL GALLERY</h2>
+        <div class="rb_gallery_item">Image 1</div>
+        <div class="rb_gallery_item">Image 2</div>
+        <div class="rb_gallery_item">Image 3</div>
+        <div class="rb_gallery_item">Image 4</div>
+        <div class="rb_gallery_item">Image 5</div>
+        <div class="rb_gallery_item">Image 6</div>
+    </section>
+
+    <footer class="footer_nav section_reveal">
+        <div class="footer_col">
+            <p class="footer_title">Credits</p>
+            <p class="footer_text">Red Bull Oracle Racing</p>
+        </div>
+        <div class="footer_col">
+            <p class="footer_title">Images</p>
+            <p class="footer_text">Lorem ipsum source 1<br>Lorem ipsum source 2</p>
+        </div>
+        <div class="footer_col">
+            <p class="footer_title">Power Units</p>
+            <p class="footer_text">Ford RB Powerunits</p>
+        </div>
+        <div class="footer_col">
+            <p class="footer_title">FIA 2026</p>
+            <p class="footer_text">Lorem ipsum info</p>
+        </div>
+        <div class="footer_col">
+            <p class="footer_title">F1 2026 Season</p>
+            <p class="footer_text">Lorem ipsum info</p>
+        </div>
+        <div class="footer_copy">© 2026 Your Website Name</div>
+    </footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const header = document.querySelector('.header_reveal');
+    const sections = document.querySelectorAll('.section_reveal');
+
+    setTimeout(() => {
+        header.classList.add('active');
+    }, 50);
+
+    function revealOnScroll() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if(rect.top < window.innerHeight && rect.bottom > 0){
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+});
+</script>
+
 </body>
 </html>

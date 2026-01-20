@@ -97,8 +97,8 @@ body {
 }
 .about_rb_hist_img,
 .about_rb_now_img {
-  width: 30%;
-  max-width: 400px;
+  width: 40%;
+  /* max-width: 400px; */
   border-radius: 10px;
   height: auto;
 }

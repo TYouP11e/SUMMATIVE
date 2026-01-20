@@ -72,7 +72,7 @@ body {
 .red_bull_now {
   width: 100%;
   padding: 4% 2.5%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .about_rb_title,
 .about_rb_title_now {
@@ -260,4 +260,8 @@ body {
   .footer_col {
     width: 90%;
   }
+}
+
+.red_bull_now{
+  margin-top: 0%;
 }
